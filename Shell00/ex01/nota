@@ -1,0 +1,22 @@
+arquivo para entregar: testShell00.tar
+
+chmod -> muda as atribuições do arquivo
+- rw- r-- r--
+  420 400 400
+   6   4   4
+PARA
+- r-- r-x r-x
+  400 401 401
+   4   5   5
+
+o comando fica:
+chmod 455 <nome arquivo>
+
+touch -t -> muda a hora e data
+touch -t aaaannddhhmm <nome arquivo>
+
+no caso, o comando fica:
+touch -t 202006012342
+
+para compactar com .tar
+tar -cf testShell00.tar testShell00

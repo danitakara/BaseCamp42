@@ -1,0 +1,82 @@
+arquivo para entrega: exo2.tar
+
+criar arquivos E pastas
+visualização:
+drwx--xr-x 2 XX XX XX Jun 1 20:47 test0
+-rwx--xr-- 1 XX XX 4 Jun 1 21:46 test1
+dr-x---r-- 2 XX XX XX Jun 1 22:45 test2
+-r-----r-- 2 XX XX 1 Jun 1 23:44 test3
+-rw-r----x 1 XX XX 2 Jun 1 23:43 test4
+-r-----r-- 2 XX XX 1 Jun 1 23:44 test5
+lXXXXXXXXX 1 XX XX 5 Jun 1 22:20 test6 -> test0
+
+d = diretório
+- = arquivo
+l = link simbólico
+
+-		r-----r-- 	2 			XX 		XX 		1 			Jun 1 23:44		test5
+tipo	acessos		# links		dono	grupo	tamanho		modificação		nome arquivo
+
+1º criar diretório: test0, test2
+	mkdir test0
+	mkdir test2
+
+2º criar arquivo: test1, test3, test4, test5
+	touch test1
+
+3º criar link simbólico: test6
+	ln -s <arquivo princial> <arquivo linkado>
+	ln -s test0 test6
+
+4º ajustar quantidade de byte
+	drwx--xr-x 2 XX XX		-> XX <-	 	Jun 1 20:47 test0
+	-rwx--xr-- 1 XX XX 		-> 4 <-			Jun 1 21:46 test1
+	dr-x---r-- 2 XX XX 		-> XX <- 		Jun 1 22:45 test2
+	-r-----r-- 2 XX XX 		-> 1 <-			Jun 1 23:44 test3
+	-rw-r----x 1 XX XX 		-> 2 <-			Jun 1 23:43 test4
+	-r-----r-- 2 XX XX 		-> 1 <-			Jun 1 23:44 test5
+	lXXXXXXXXX 1 XX XX 		-> 5 <-			Jun 1 22:20 test6 -> test0
+
+5º mudar acessos
+	d rwx --x r-x 2 XX XX test0
+	  421 001 401
+	   7   1   5
+	- rwx --x r-- 1 XX XX test1
+	  421 001 400
+	   7   1   4
+	d r-x --- r-- 2 XX XX test2
+	  401 000 400
+	   5   0   4
+	- r-- --- r-- 2 XX XX test3
+	  400 000 400
+	   4   0   4
+	- rw- r-- --x 1 XX XX test4
+	  420 400 001
+	   6   4   1
+	- r-- --- r-- 2 XX XX test5
+	  400 000 400
+	   4   0   4
+	l XXXXXXXXX 1 XX XX test6 -> test0 	
+
+comando: chmod <número> <nome arquivo>
+	para cada arquivo/diretório
+
+6º mudar data e hora
+Jun 1 20:47 test0
+Jun 1 21:46 test1
+Jun 1 22:45 test2
+Jun 1 23:44 test3
+Jun 1 23:43 test4
+Jun 1 23:44 test5
+Jun 1 22:20 test6 -> test0
+
+comando: touch -t aaaammddhhmm <nome arquivo>
+	touch -t 202006012047 test0
+	touch -t 202006042146 test1
+		(para cada arquivo)
+	
+	touch -h -t aaaammddhhmm <nome LINK SIMBÓLICO>
+
+6º criar o arquivo para entrega:
+	tar -cf exo2.tar *
+
