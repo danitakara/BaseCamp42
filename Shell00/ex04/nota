@@ -1,0 +1,25 @@
+arquivo para entregar: git_commit.sh
+
+1. criar programa shell
+	#!/bin/sh
+		na primeira linha do código
+
+para retornar id dos 5 ultimos commit 
+						isso quer dizer, o hash do commit 
+	comando: git log
+		(aparece o log dos últimos commit)
+		hash é o número após o commit 
+
+comando: git log --format="%H" -5
+		 git log --pretty="%H" -5
+				--format ou --pretty printa (mostra) o conteúdo de
+				um commit em um determinado formato que será
+				apresentado logo após o =
+					"%H" - é um placeholder para o commit hash
+					-5 é o número máximo que deverá ser mostrado
+
+logo, o comando inteiro fica: 	git log --format="%H" -n5
+dentro do arquivo shell
+
+2. executar o programa shell com o comando
+	bash git_commit.sh | cat -e 

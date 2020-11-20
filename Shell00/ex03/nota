@@ -1,0 +1,25 @@
+arquivo para entregar: midLS
+	no corpo do arquivo escrever a linha de comando para
+		1. listar arquivos e pastas
+				comando: ls 
+			NÃO	arquivo oculto
+				"."
+				".."
+		2. separar por vírgulas
+				comando -p
+		3. ordenar por data de acesso
+				comando -u
+		4. pastas seguidas por barra
+				comando -m
+
+linha de comando fica: ls -pum
+
+1º criar arquivos (para serem usados como exemplo)
+	touch 1 2 3
+
+2º criar diretórios
+	mkdir pasta1 pasta2
+
+3º rodar comando
+	ls -pum
+
