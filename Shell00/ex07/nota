@@ -1,0 +1,19 @@
+arquivo para entregar: clean
+
+Escrever uma linha de comando no corpo do arquivo
+1. procurar nas pastas e subpastas
+	arquivos de nomes
+		terminam com ~ (*~)
+		OU
+		começam e terminem com # (#*#)
+
+
+
+comando:
+	find . -typef \(-name "*~" -o -name "#*#"\) -print -delete
+		find .						procura nas pastas e subpastas
+		-typef						arquivos (e nao diretórios)
+		-name "*~" -o -name "#*#"	parâmetros do nome do arquivo que deve ser procurado
+		-print						mostrar
+		-delete						apagar
+

@@ -1,0 +1,43 @@
+arquivo para entregar: print_groups.sh
+
+1º criar o arquivo print_groups.sh
+	touch print_groups.sh
+		dentro do arquivo a primeira linha precisa ter o script shell
+		#!/bin/sh 
+
+2º mudar o acesso para ficar executável para todos
+	rw- r-- r--
+	420 400 400
+mudar para:
+	421 401 401
+	 7   5   5
+		chmod 755 print_groups.sh
+	
+1. escrever um comando 
+	1.1 determinar E mostrar
+		comando: groups <variável para mostrar>
+			lista de grupos 
+					login na variável <variável para mostrar>
+2. separar por vírgula SEM ESPAÇO
+	comando: tr ' ' ','
+			tr 		-> traduzir ou deletar caracteres
+			' ' 	-> espaço 
+			','		-> vírgula
+				ou seja, ele vai deletar os espaço ' ' e substituí-los por vírgula ','
+
+1º Criar a variável FT_USER
+	export <variável>=<valor da variável>
+	export FT_USER=student
+		export	-> já cria a variável FT_USER (pois foi "FT_USER" que usamos no exemplo)
+
+2º escrever o comando no script
+	groups $FT_USER | tr ' ' ','
+			$ 	-> pra entender que é a variável e não o próprio texto que está escrito
+			|	-> nome: pipe. o que ele faz? ele adiciona mais um comando na linha
+
+3º testar o comando no terminal
+	./print_groups.sh
+		. 	-> a partir desta pasta
+		/	-> as pastas em geral
+
+e acabou!

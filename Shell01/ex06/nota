@@ -1,0 +1,8 @@
+no .sh
+groups #FT_USER
+
+
+export FT_USER=staff
+
+comando no terminal 
+	 ./print_groups.sh

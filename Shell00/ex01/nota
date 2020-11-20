@@ -1,5 +1,11 @@
 arquivo para entregar: testShell00.tar
 
+-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00
+
+1. mudar o tamanho do arquivo
+    entrar no arquivo e mudar até que ele tenha 40 bytes
+
+2. mudar a atribuição do arquivo 
 chmod -> muda as atribuições do arquivo
 - rw- r-- r--
   420 400 400

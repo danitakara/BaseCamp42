@@ -1,0 +1,11 @@
+ifconfig = acha tudo que tá conectado na internet
+ifconfig -a = mostra mais resultados
+
+segunda linha do ifconfig
+é o que ele quer
+
+if config | grep ether | cut -c 14-
+
+grep = seleciona o texto que se quer mostrar
+
+

@@ -1,0 +1,37 @@
+arquivo para entregar: b
+
+Na intra há dois arquivos para serem baixados:
+	a 
+	sw.diff
+
+Baixar e copiar na pasta ex06 (arrastar e soltar)
+
+O que temos que fazer?
+1.	temos o texto a e a diferença dele no sw.diff
+	temos que aplicar a diferença no texto a
+	para formar o texto b - que será entregue
+	x + y = b 
+	x = a
+	y = sw.diff
+
+comando no terminal:
+2.	patch -b a sw.diff
+		patch:		aplicar a diferença ao texto
+		-b: 		para criar um backup de a, que será o texto que queremos
+		a:			texto original (x)
+		sw.diff:	diferença (y)
+
+deste comando, vai resultar dois arquivos:
+	a.orig
+	a 
+
+renomear o 'a' para 'b'
+3.	mv a b
+		mv:	renomear
+
+resultado: 
+	a.orig 
+	b
+	sw.diff
+	
+entregar arquivo b
