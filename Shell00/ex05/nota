@@ -1,0 +1,29 @@
+arquivo para entregar: git_ignore.sh
+
+lista de arquivos existentes IGNORADOS no repositório
+
+1. criar arquivos para serem ignorados (para serem alocados dentro
+	da pasta .gitignore)
+		teste1
+		teste2
+
+2. criar o arquivo .gitignore na Shell00
+
+3. escrever no corpo do arquivo .gitignore o caminho para os arquivos
+	que serão ignorados
+		/ex05/teste1
+		/ex05/teste2
+
+4. criar o arquivo git_ignore.sh
+	lembrar que, sendo um script (executável), é preciso que na linha
+	1 é preciso escrever: #!/bin/sh
+
+5. o comando: git ls-files . --ignored --exclude-standard --others
+	git ls-files . -> vai listar todos os arquivos
+	--ignored -> listar os arquivos ignorados
+	--exclude-standard -> excluindo-se os standard
+	-- others -> e outras coisas
+		restando assim somente os ignorados (que é o objetivo do enunciado)
+
+6. rodar o comando 
+	bash git_ignore.sh | cat -e 
