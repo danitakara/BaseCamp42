@@ -36,17 +36,3 @@ arquivo para entregar: find_sh.sh
 
 6º ir para o terminal e executar o arquivo
 	comando: ./find_sh.sh | cat -e
-
-
-
-
-
-
-find . -type f -name "*.sh" -exec basename {} \; | sed 's/\.sh$//'
-find . -type f -name "*.sh" -exec basename {} .sh \;
-
-*fazer arquivo teste
-
-1. criar arquivo find_sh.sh
-2. arquivo: #!/bin/sh
-		chmod +x : para execução de arquivos executáveis

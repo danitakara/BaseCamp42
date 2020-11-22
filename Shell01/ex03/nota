@@ -1,5 +1,31 @@
-find . | wc -l
+arquivo para entregar: count_files.sh
 
+1. escrever uma linha de comando
+	mostrar 	- o número de arquivos regulares
+				- pastas dentro da pasta atual
+				- todas as suas subpastas 
+					incluindo o "."
 
-wc = contador de coisas
--l = linhas
+1º criar arquivo count_files.sh
+
+2º script do shell
+	#!/bin/sh
+
+3º mudar o acesso do arquivo
+	chmod 777 <nome arquivo>
+
+4º escrever no corpo do count_files.sh o comando que segue
+	find . | wc -l
+		find .		-> procurar na pasta atual e todas as suas subpastas
+		wc			-> mostrar o número de arquivos regulares
+			(quando dá o find ., ele lista um arquivo por linha, logo, para contar quantos arquivos temos, basta contar quantas linhas o find . retorna)
+		-l			-> porque vai contar quantas linhas o find . retornou
+
+4º criar 3 arquivos teste
+	touch teste1 teste2 teste3
+
+5º criar 3 diretórios testedir
+	mkdir testedir1 testedir2 testedir3
+
+6º executar o arquivo count_files.sh
+	./count_files.sh
