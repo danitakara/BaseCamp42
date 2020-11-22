@@ -1,0 +1,15 @@
+pasta para entrega: ex00
+arquivos para entregar: main.c, ft_putchar.c, rush0X.c (onde X corresponde ao número do rush)
+funções autorizadas: write
+
+1º criar um arquivo .c
+	a) ao finalizar o scrip, fazer o comando: 
+				$ gcc <nome arquivo>.c -o <nome arquivo>
+		a fim de torná-lo um executável
+	b) e então, no terminal, executar o comando: 
+				./<nome arquivo>
+		para rodar o script executável
+
+2º no header do arquivo criado, colocar a biblioteca que será usada
+	#include <stdio.h>
+
