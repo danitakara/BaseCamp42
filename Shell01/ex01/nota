@@ -6,6 +6,7 @@ arquivo para entregar: print_groups.sh
 		#!/bin/sh 
 
 2º mudar o acesso para ficar executável para todos
+de
 	rw- r-- r--
 	420 400 400
 mudar para:
@@ -25,17 +26,17 @@ mudar para:
 			','		-> vírgula
 				ou seja, ele vai deletar os espaço ' ' e substituí-los por vírgula ','
 
-1º Criar a variável FT_USER
+3º Criar a variável FT_USER
 	export <variável>=<valor da variável>
 	export FT_USER=student
 		export	-> já cria a variável FT_USER (pois foi "FT_USER" que usamos no exemplo)
 
-2º escrever o comando no script
+4º escrever o comando no script
 	groups $FT_USER | tr ' ' ','
 			$ 	-> pra entender que é a variável e não o próprio texto que está escrito
 			|	-> nome: pipe. o que ele faz? ele adiciona mais um comando na linha
 
-3º testar o comando no terminal
+5º testar o comando no terminal
 	./print_groups.sh
 		. 	-> a partir desta pasta
 		/	-> as pastas em geral

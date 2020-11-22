@@ -7,13 +7,25 @@ Escrever uma linha de comando no corpo do arquivo
 		OU
 		começam e terminem com # (#*#)
 
-
-
 comando:
-	find . -typef \(-name "*~" -o -name "#*#"\) -print -delete
+	find . -type f \( -name "*~" -o -name "#*#" \) -print -delete
 		find .						procura nas pastas e subpastas
 		-typef						arquivos (e nao diretórios)
 		-name "*~" -o -name "#*#"	parâmetros do nome do arquivo que deve ser procurado
 		-print						mostrar
 		-delete						apagar
 
+1º criar arquivo clean
+	touch clean
+
+2º copiar o código no corpo do arquivo clean
+
+-> como testar?
+
+1º criar um arquivo que termine com ~
+	touch teste~
+
+2º criar um arquivo que comece e termine com #
+	touch '#teste#'
+
+3º rodar comando no terminal

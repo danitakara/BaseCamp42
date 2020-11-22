@@ -6,13 +6,13 @@
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 02:47:41 by dtakara           #+#    #+#             */
-/*   Updated: 2020/11/22 02:47:59 by dtakara          ###   ########.fr       */
+/*   Updated: 2020/11/22 14:58:08 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush04.c"
+void	rush(int x, int y);
 
-int	main(void)
+int		main(void)
 {
 	rush(4, 4);
 	return (0);

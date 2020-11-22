@@ -1,0 +1,34 @@
+arquivo para entregar ft_magic
+
+1. criar um arquivo nomeado ft_magic
+		touch ft_magic
+
+2. no corpo do arquivo, escrever na formatação correta para detectar
+	2.1	arquivos de tipo <42 file>
+		cadeia "42"
+				-> (isso significa que vamos procrar na string)
+			ao 42º byte
+
+1º criar um arquivo nomeado ft_magic
+		touch ft_magic
+
+2º criar o arquivo teste
+		touch teste
+
+3º no editor de texto do teste, escrever uma linha com 41 bytes
+
+4º em seguida, escrever TEXTUALMENTE "42"
+
+5º no corpo do texto do ft_magic escrever o comando
+	41 string 42 42 file
+
+3. para testar:
+	no terminal, escrever o comando
+		file -m <nome arquivo> <parâmetro de procura>
+		file -m ft_magic 42
+			file -m		-> para procurar arquivos de forma "mágica"
+			ft_magic	-> no arquivo chamado ft_magic
+			42			-> o texto 42
+
+
+
