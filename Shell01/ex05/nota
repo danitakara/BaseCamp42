@@ -1,7 +1,41 @@
-como criar o arquivo com caracters especiais
+arquivo para entregar: "\?$*'MaRViN'*$?\"
 
-precisa criar estranho para ficar estranho-normal
+(respira e vamos com calma)
+1. dentro do arquivo "\?$*'MaRViN'*$?\" deverá ser escrito
+		42
 
-echo <texto do arquivo> > <nome do arquivo>
-jeito de já criar um arquivo com texto dentro
+2. como criar um arquivo de nome tão exótico?
+	se a gente criar o arquivo copiando e colando, vai dar ruim
+	pois não é possível começar o nome de um arquivo com "
 
+então fazemos como?
+siga a tabela de notação de caracteres especiais:
+	para	\	escreve-se	\\
+	para	"	escreve-se	\"
+	para	'	escreve-se	\'
+	para 	$	escreve-se	\$
+	para	?	escreve-se	\?
+	para 	*	escreve-se	\*
+
+logo, para compor o nome do arquivo "\?$*’MaRViN’*$?\"
+faremos a correspondência que segue:
+	"	\	?	$	*	’	MaRViN	’	*	$	?	\	"
+	\"	\\	\?	\$	\*	\'	MaRViN	\'	\*	\$	\?	\\	\"
+
+o nome para ser criado ficará
+	\"\\\?\$\*\'MaRViN\'\*\$\?\\\"
+
+para que dando-se ls -lRa *MaRV* | cat -e, ele retorne o nome do arquivo como	
+	"\?$*'MaRViN'*$?\"$
+
+1º criar o arquivo "\?$*'MaRViN'*$?\"
+	touch \"\\\?\$\*\'MaRViN\'\*\$\?\\\"
+
+2º escrever dentro do arquivo o texto	
+	42
+
+3º confirmar o nome do arquivo com o comando
+	ls -lRa *MaRV* | cat -e
+		que dererá mostrar o seguinte:
+		-rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+	

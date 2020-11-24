@@ -22,7 +22,7 @@ touch -t -> muda a hora e data
 touch -t aaaannddhhmm <nome arquivo>
 
 no caso, o comando fica:
-touch -t 202006012342
+touch -t 202006012342 testShell00
 
 para compactar com .tar
 tar -cf testShell00.tar testShell00

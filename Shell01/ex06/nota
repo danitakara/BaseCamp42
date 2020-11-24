@@ -1,67 +1,20 @@
-no .sh
-groups #FT_USER
+arquivo para entregar: skip.sh
 
+1º criar o arquivo skip.sh
+	#!/bin/sh
 
-export FT_USER=staff
+2º mudar as autorizações do arquivo	
+	chmod 777 skip.sh
 
-comando no terminal 
-	 ./print_groups.sh
+3º criar arquivos testes
+	touch 1 2 3 4 5 6 7 8 9
 
+3º colocar no corpo do texto do arquivo skip.sh o seguindo comando:
+	ls -l | awk 'NR % 2 == 0'
 
-
-### ex06
-
-- https://www.man7.org/linux/man-pages/man1/sed.1.html
-- https://www.man7.org/linux/man-pages/man1/awk.1p.html
-- https://unix.stackexchange.com/questions/219859/how-to-delete-every-second-line-from-a-file
-
-- https://stackoverflow.com/questions/2560411/how-to-remove-every-other-line-with-sed
-- https://stackoverflow.com/questions/604864/print-a-file-skipping-the-first-x-lines-in-bash
-- https://serverfault.com/questions/375096/bash-sed-awk-etc-remove-every-other-newline
-- 
-
-# EVEN LINES
-ls -l | sed -e n\;d
-ls -l | sed '0~2d'
-ls -l | sed -n 'p;n'
-ls -l | sed -n '1~2p'
-
-ls -l | awk 'FNR%2'
-ls -l | awk 'NR % 2 != 0'
-ls -l | awk 'NR % 2 {print} !(NR % 2) && /pattern/ {print}'
-ls -l | awk 'NR % 2 {print} !(NR % 2) {print | "grep pattern | rev" }'
-ls -l | awk 'NR % 2 {print} !(NR % 2) {print length($0)}' 
-
-ls -l | perl -ne 'print if $. % 2'
+4º executar o arquivo skip.sh
+	./skip.sh
 
 # ODD LINES
 ls -l | sed -n 'n;p'
 ls -l | awk 'NR % 2 == 0'
-Unix & Linux Stack Exchange
-How to delete every second line from a file?
-File:
-
-Data inserted into table. Total count 13
-No error occurred
-Data inserted into table. Total count 45
-No error occurred
-Data inserted into table. Total count 14
-No error occurred
-Data inserted...
-
-Stack Overflow
-How to remove every other line with sed?
-How can I remove every odd line, using sed?
-
-remove
-keep
-remove
-keep
-remove
-...
-
-Stack Overflow
-Print a file, skipping the first X lines, in Bash
-I have a very long file which I want to print, skipping the first 1,000,000 lines, for example.
-I looked into the cat man page, but I did not see any option to do this. I am looking for a command t...
-

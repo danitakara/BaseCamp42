@@ -27,5 +27,6 @@ comando:
 
 2º criar um arquivo que comece e termine com #
 	touch '#teste#'
+	touch \#teste#
 
 3º rodar comando no terminal

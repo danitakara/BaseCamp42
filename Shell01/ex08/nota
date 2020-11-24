@@ -1,0 +1,23 @@
+duas variáveis: FT_NBR1 e FT_NBR2
+FT_NBR1 -> base '\"?!	-> base 5
+				01234
+FT_NBR2 -> base mrdoc	-> base 5
+				01234
+	ASCII = base 5 = 01234
+		tabela que o computador usa para transformar os códigos binários
+
+base gtaio luSnemf
+	13 = 0123456789ABC
+
+FT_NBR1=\'?"\"'\
+		10321201
+FT_NBR2=rcrdmddd
+		14130333
+(usar um comando para converter isso. dani, use o tr ou talvez o sed com o hdal-mol disse)
+
+somar FT_NBR1 + FT_NBR2 na base 5
+		(bc)
+o resultado disso, converter na base 13
+e aí eu tenho o resultado em número
+
+pegar base gtaio luSnemf e transformar em texto legível.

@@ -14,8 +14,15 @@ arquivo para entregar MAC.sh
 2º mudar a atribuição do arquivo MAC.sh
 	chmod 777 MAC.sh
 
+3º escrever o comando no arquivo MAC.sh
+	ifconfig | grep ether | cut -c 15-
+		OU
+	ifconfig | grep ether | sed "s/        ether //"
+
+4º executar o arquivo MAC.sh
 
 
+**Dani, reformule esta explicação depois**
 ifconfig = acha tudo que tá conectado na internet
 ifconfig -a = mostra mais resultados
 
@@ -23,14 +30,7 @@ segunda linha do ifconfig
 é o que ele quer
 
 if config | grep ether | cut -c 14-
+	grep = seleciona o texto que se quer mostrar
 
-grep = seleciona o texto que se quer mostrar
-
-
-# Puxa todas as interfaces de rede ativas
-ifconfig | \
-  # Pega so as linhas que contenham a palavra ether
-  grep ether | \
-  # Remove a string 'ether ' de cada linha
-  sed "s/        ether //"
-
+ifconfig | grep ether | sed "s/        ether //"
+	sed = máscara de texto
