@@ -1,16 +1,23 @@
 arquivo para entregar: skip.sh
 
+1. precisamos fazer o comando ls -l pulando linha, ou seja, ocultando as linhas ímpares e mostrando somente as pares
+
 1º criar o arquivo skip.sh
 	#!/bin/sh
 
 2º mudar as autorizações do arquivo	
 	chmod 777 skip.sh
+	chmod +x skip.sh
 
 3º criar arquivos testes
-	touch 1 2 3 4 5 6 7 8 9
+	touch {1..9}
 
 3º colocar no corpo do texto do arquivo skip.sh o seguindo comando:
 	ls -l | awk 'NR % 2 == 0'
+			awk 'NR % 2 == 0'	-> mostra os pares
+			awk 'NR % 2 == 1'	-> mostra os ímpares
+				awk		-> verifica arquivos de entrada em busca de linhas que correspondam ao padrões especificados
+				NR		-> (number of record/registro) número de linhas considerando todas as entradas
 
 4º executar o arquivo skip.sh
 	./skip.sh

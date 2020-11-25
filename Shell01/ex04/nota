@@ -13,13 +13,19 @@ arquivo para entregar MAC.sh
 
 2º mudar a atribuição do arquivo MAC.sh
 	chmod 777 MAC.sh
+	chmo +x MAC.sh
 
-3º escrever o comando no arquivo MAC.sh
+4º escrever o cabeçalho do script (receita de bolo)
+	#!/bin/sh
+
+5º escrever o comando no arquivo MAC.sh
 	ifconfig | grep ether | cut -c 15-
+	ifconfig | grep ethernet | cut -c 15-
 		OU
 	ifconfig | grep ether | sed "s/        ether //"
+									s=substituir tudo o que está entre as //
 
-4º executar o arquivo MAC.sh
+6º executar o arquivo MAC.sh
 
 
 **Dani, reformule esta explicação depois**

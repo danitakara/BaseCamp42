@@ -34,8 +34,18 @@ para que dando-se ls -lRa *MaRV* | cat -e, ele retorne o nome do arquivo como
 2º escrever dentro do arquivo o texto	
 	42
 
-3º confirmar o nome do arquivo com o comando
+3º mudar a atribuição do arquivo "\?$*'MaRViN'*$?\"
+	chmod 614 \"\\\?\$\*\'MaRViN\'\*\$\?\\\"
+
+4º mudar a data e hora
+	touch -t 202010021221 \"\\\?\$\*\'MaRViN\'\*\$\?\\\"
+
+5º confirmar o nome do arquivo com o comando
 	ls -lRa *MaRV* | cat -e
 		que dererá mostrar o seguinte:
-		-rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+		-rw---xr-- 1 75355 32015 		2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+		-rw---xr-- 1 dtakara dtakara 	2 Oct  2 12:21 "\?$*'MaRViN'*$?\"$
+
+
+
 	

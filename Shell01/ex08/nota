@@ -1,13 +1,84 @@
-duas variáveis: FT_NBR1 e FT_NBR2
-FT_NBR1 -> base '\"?!	-> base 5
-				01234
-FT_NBR2 -> base mrdoc	-> base 5
-				01234
+arquivo para entregar: add_chelou.sh
+
+1. escrever uma linha de comando
+	soma de FT_NBR1 com FT_NBR2
+	o resultado disso, exibir em base gtaio luSnemf
+		FT_NBR1 = ’\"?!
+		FT_NBR2 = mrdoc
+
+1.1 basicamente precisamos somar FT_NBR1 + FT_NBR2 na base 5
+	o resultado precisa ser apresentado na base 13
+
+mas o que são bases?
+
+
+2. temos duas variáveis: FT_NBR1 e FT_NBR2
+	FT_NBR1 -> base '\"?!	-> base 5
+					01234
+	FT_NBR2 -> base mrdoc	-> base 5
+					01234
+
+2.1	temos a resposta em base gtaio luSnemf
+		gtaio luSnemf = base 13
+
+1º criar arquivo add_chelou.sh
+2º cabeçalho shell
+	#!/bin/sh
+3º mudar atribuição do arquivo
+	chmod +x add_chelou.sh
+4º exportar as variáveis FT_NBR1 e FT_NBR2
+	export <nome variável>=<valor da variável>
+	Exemplo 1: 
+		export FT_NBR1=\'?"\"'\
+		export FT_NBR1=\\\'\?\"\\\"\'\\
+				(no exemplo do pdf está FT_NBR1=\'?"\"'\, porém é preciso colocar \ antes de cada caractere)
+		export FT_NBR2=rcrdmddd
+	
+	Exemplo 2:
+		export FT_NBR1=\"\"!\"\"!\"\"!\"\"!\"\"!\"\"
+		export FT_NBR1=\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"
+		export FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
+			   FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
+
+4º escrever linha de comando no arquivo
+	echo $FT_NBR1 + $FT_NBR2 | tr \'\\\\\"\?\! 01234 | tr mrdoc 01234 | xargs echo "obase=13; ibase=5;" | bc | tr 0123456789ABC "gtaio luSnemf"
+		echo + bc 								-> calculadora
+		tr <palavra escrita> <base 5>
+		xargs echo 								-> pega o imput (ibase) da base 5 para o output (obase) para a base 13
+		tr <base 13> <palavra criptografada>	-> traduz a base para a palavra criptografada
+
+Escreva uma linha de comando que pegue os números contidos nas 
+variáveis FT_NBR1
+de base ’\"?! e FT_NBR2 de base mrdoc, e que também exiba a soma dos dois em
+base gtaio luSnemf (sim, o espaço conta)
+
+FT_NBR1=\'?"\"'\
+FT_NBR2=rcrdmddd
+
+
+
+
+
+
+
+váriavel de nome FT_NBR1 
+	export <nome variável>=<valor da variável>
+	export FT_NBR1=’\"?!
+	export FT_NBR2=mrdoc
+
+
+
+echo $FT_NBR1 + $FT_NBR2 | tr ""'\\\?!" "0134" | tr '"' '2' | tr "mrdoc" "01234" | xargs echo "obase=13; ibase=5;" | bc | tr "0123456789ABC" "gtaio luSnenf"
+
+echo $FT_NBR1 + $FT_NBR2  | tr "'" "0" | sed 's/\/1/g' | sed "s/"/2/g" | sed 's/?/3/g' | sed 's/!/4/g' | tr "mrdoc" "01234" | xargs echo 'obase=13; ibase=5;' | bc | tr 0123456789ABC 'gtaio luSnemf'
+
+
+
 	ASCII = base 5 = 01234
 		tabela que o computador usa para transformar os códigos binários
 
-base gtaio luSnemf
-	13 = 0123456789ABC
+base 		gtaio luSnemf
+	13 = 	0123456789ABC
 
 FT_NBR1=\'?"\"'\
 		10321201

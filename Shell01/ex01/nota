@@ -26,13 +26,17 @@ mudar para:
 			','		-> vírgula
 				ou seja, ele vai deletar os espaço ' ' e substituí-los por vírgula ','
 
+3. tirar a quebra de linha
+	comando: tr -d '\n'
+			-d = deleta toda a ocorrência do parâmetro (que no caso é o \n)
+
 3º Criar a variável FT_USER
 	export <variável>=<valor da variável>
 	export FT_USER=student
 		export	-> já cria a variável FT_USER (pois foi "FT_USER" que usamos no exemplo)
 
 4º escrever o comando no script
-	groups $FT_USER | tr ' ' ','
+	groups $FT_USER | tr ' ' ',' | tr -d '\n'
 			$ 	-> pra entender que é a variável e não o próprio texto que está escrito
 			|	-> nome: pipe. o que ele faz? ele adiciona mais um comando na linha
 
