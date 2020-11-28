@@ -1,0 +1,34 @@
+arquivo para entregar: ft_putchar.c
+
+1. escrever uma função
+	mostrar o caractere c
+
+1.1 a função precisa estar assim:
+	void ft_putchar(char c);
+
+1.2 esta função precisa ter
+	write(1, &c, 1);
+
+para compilar:
+gcc -Wall -Wextra -Werror <nome arquivo>
+
+segredo aqui:
+rodar a norminette
+	norminette -R CheckForbiddenSourcerHeader
+
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+
+
+int		main(void)
+{
+	ft_putchar('d');
+}
+
+tá pronto, dani!

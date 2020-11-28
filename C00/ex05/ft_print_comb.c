@@ -1,19 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 02:47:41 by dtakara           #+#    #+#             */
-/*   Updated: 2020/11/25 21:35:41 by dtakara          ###   ########.fr       */
+/*   Created: 2020/11/25 23:45:02 by dtakara           #+#    #+#             */
+/*   Updated: 2020/11/27 12:24:50 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <unistd.h>
 
-	int	main(void)
+void	ft_print_comb(void)
 {
-	rush(4, 4);
-	return (0);
+	char i;
+	char j;
+	char k;
+	
+	i = '0';
+	j = '1';
+	k = '2';
+
+	while (i <= '7')
+	{
+		while (j <= '8')
+		{
+			while (k <= '9')
+			{
+				if (i < j && j < k)
+				{
+					write (1, &i, 1);
+					write (1, &j, 1);
+					write (1, &k, 1);
+					
+					if (i != '7')
+					{
+						write (1, ", ", 2);			
+					}
+				}
+				k++;	
+			}
+			j++;
+			k = '2';
+		}
+		i++;
+		j = '1';
+	}
 }

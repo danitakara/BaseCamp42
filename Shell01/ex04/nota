@@ -21,7 +21,7 @@ arquivo para entregar MAC.sh
 5º escrever o comando no arquivo MAC.sh
 	ifconfig | grep ether | cut -c 15-
 	ifconfig | grep ethernet | cut -c 15-
-		OU
+		OU							-c -> characters
 	ifconfig | grep ether | sed "s/        ether //"
 									s=substituir tudo o que está entre as //
 

@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 02:47:41 by dtakara           #+#    #+#             */
-/*   Updated: 2020/11/25 21:35:41 by dtakara          ###   ########.fr       */
+/*   Created: 2020/11/25 22:34:28 by dtakara           #+#    #+#             */
+/*   Updated: 2020/11/27 02:48:10 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <unistd.h>
 
-	int	main(void)
+void	ft_print_numbers(void)
 {
-	rush(4, 4);
-	return (0);
+	int c;
+
+	c = 48;
+	while (c <= 57)
+	{
+		write(1, &c, 1);
+		c++;
+	}
 }

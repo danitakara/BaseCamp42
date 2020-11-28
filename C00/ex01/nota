@@ -1,0 +1,16 @@
+arquivo para entregar: ft_print_alphabet.c
+
+
+
+#include <unistd.h>
+void	ft_print_alphabet(void)
+{
+	write(1,"abcdefghijklmnopqrstvwxyz", 26)
+
+}
+			"" (para entender que é uma string e nao um caractere)
+			se colocasse aspas simples, ele entenderia que seria um caractere e nao uma string
+			
+
+tá pronto, dani!
+
