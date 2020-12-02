@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 22:49:11 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/01 22:53:31 by dtakara          ###   ########.fr       */
+/*   Created: 2020/12/01 19:29:51 by dtakara           #+#    #+#             */
+/*   Updated: 2020/12/01 23:29:15 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char		*ft_strupcase(char *str)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (i < n && src[i] != '0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if ((str[i] >= 'a') && (str[i] <= 'z'))
+		{
+			str[i] = str[i] - 32;
+		}
 		i++;
 	}
-	dest[n] = '\0';
-	return (dest);
+	return (str);
 }

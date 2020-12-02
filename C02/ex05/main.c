@@ -4,12 +4,9 @@ int        ft_str_is_uppercase(char *str);
 
 int main(void)
 {
-    char str[]="%^";
+    char str[]="ABC";
     int a;
 
     a=ft_str_is_uppercase(str);
     printf ("%d\n", a);
 }
-
-
-

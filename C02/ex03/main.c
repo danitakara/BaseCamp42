@@ -4,7 +4,7 @@ int        ft_str_is_numeric(char *str);
 
 int main(void)
 {
-    char str[]="";
+    char str[]="adf";
     int a;
 
     a=ft_str_is_numeric(str);

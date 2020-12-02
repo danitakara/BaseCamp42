@@ -1,25 +1,25 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/01 22:32:59 by dtakara           #+#    #+#             */
+/*   Updated: 2020/12/01 22:34:11 by dtakara          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int i;
+
 	i = 0;
-	while	(src[i] != '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int main (void)
-{
-	char *dest;
-	char *src;
-	char kerelhom[] = "kerelhom";
-	src = kerelhom;
-	ft_strcpy(dest, src);
-	printf("%s", dest);
-	return 0;
 }

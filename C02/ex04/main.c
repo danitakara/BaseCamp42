@@ -4,7 +4,7 @@ int        ft_str_is_lowercase(char *str);
 
 int main(void)
 {
-    char str[]="%^";
+    char str[]="AsfwfeBD";
     int a;
 
     a=ft_str_is_lowercase(str);

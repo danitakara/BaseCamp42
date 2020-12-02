@@ -4,7 +4,7 @@ int        ft_str_is_alpha(char *str);
 
 int main(void)
 {
-    char str[]="123456";
+    char str[]="134";
     int a;
 
     a=ft_str_is_alpha(str);

@@ -6,14 +6,14 @@
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 19:29:51 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/01 20:39:07 by dtakara          ###   ########.fr       */
+/*   Updated: 2020/12/01 23:10:08 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_numeric(char *str)
 {
 	int i;
-	
+
 	i = 0;
 	if (str[i] == '\0')
 	{
@@ -21,7 +21,7 @@ int		ft_str_is_numeric(char *str)
 	}
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= '0') &&  (str[i] <= '9'))
+		if ((str[i] >= '0') && (str[i] <= '9'))
 		{
 			i++;
 		}
