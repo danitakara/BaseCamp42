@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 16:21:15 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/03 13:24:18 by dtakara          ###   ########.fr       */
+/*   Created: 2020/12/03 10:31:29 by dtakara           #+#    #+#             */
+/*   Updated: 2020/12/03 11:46:21 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	int		i;
-	int		diferencinha;
-	int		tamanho;
+	int i;
 
 	i = 0;
-	tamanho = 0;
-	while (s1[i] != '\0')
+	while (str[i] != '\0')
 	{
-		tamanho++;
+		write(1, &str[i], 1);
 		i++;
 	}
-	i = 0;
-	while (i <= tamanho)
-	{
-		if (s1[i] != s2[i])
-		{
-			diferencinha = s1[i] - s2[i];
-			return (diferencinha);
-		}
-		i++;
-	}
-	return (0);
 }
