@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 22:49:11 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/02 21:34:25 by dtakara          ###   ########.fr       */
+/*   Created: 2020/12/02 18:29:45 by dtakara           #+#    #+#             */
+/*   Updated: 2020/12/02 21:03:10 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
-
+	int	diferencinha;
+	unsigned int tamanho;
+	
 	i = 0;
-	while (i < n && src[i] != '\0')
+	tamanho = 0;
+	while (s1[i] != '\0')
 	{
-		dest[i] = src[i];
+		tamanho++;
 		i++;
 	}
-	while (i < n)
+	i = 0;
+	
+	while (i <= tamanho && i < n)
 	{
-		dest[i] = '\0';
+		if (s1[i] != s2[i])
+		{
+			diferencinha = s1[i] - s2[i];
+			return (diferencinha);
+		}
 		i++;
 	}
-	return (dest);
+	return (0);
 }
