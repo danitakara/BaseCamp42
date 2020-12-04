@@ -1,14 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 
-int		ft_strcmp(char *s1, char *s2);
+int ft_strncmp(char *s1, char *s2, unsigned int n);
 
-int        main(void)
+int main(void)
 {
     char a[] = "to bege!";
     char b[] = "to bege";
-
-    int k = ft_strcmp(a, b);
-    printf("Diferença: %d\n", k);
+    
+    int k = ft_strncmp(a, b,);
+    printf("%d\n", k);
     return (0);
 }

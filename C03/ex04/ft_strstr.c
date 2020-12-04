@@ -6,7 +6,7 @@
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 22:59:05 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/03 13:31:04 by dtakara          ###   ########.fr       */
+/*   Updated: 2020/12/03 21:52:57 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,17 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (0);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int        main(void)
+{
+    char string1[] = "if you don't love yourself, how the hell you're gonna love somebody else";
+    char string2[] = "hell";
+
+    printf("%s\n", ft_strstr(string1, string2));
+    printf("%s\n", strstr(string1, string2));
+    return (0);
 }
