@@ -1,3 +1,4 @@
+
 void print(char *str, int nb_char);
 
 int main (void){

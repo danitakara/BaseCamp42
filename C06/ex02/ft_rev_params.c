@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 17:53:43 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/04 18:33:20 by dtakara          ###   ########.fr       */
+/*   Created: 2020/12/04 17:43:53 by dtakara           #+#    #+#             */
+/*   Updated: 2020/12/04 18:34:41 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		main(int argc, char *argv[])
+void	ft_putstr(char *str)
 {
-	unsigned int	i;
-	char			c;
-
-	i = 0;
-	if (argc)
+	while (*str)
 	{
-		while (argv[0][i] != '\0')
-		{
-			c = argv[0][i];
-			write(1, &c, 1);
-			i++;
-		}
-		write(1, "\n", 1);
+		write(1, str, 1);
+		str++;
 	}
+}
+
+int		main(int argc, char **argv)
+{
+	while (argc > 1)
+	{
+		ft_putstr(argv[argc - 1]);
+		write(1, "\n", 1);
+		argc--;
+	}
+	return (0);
 }
