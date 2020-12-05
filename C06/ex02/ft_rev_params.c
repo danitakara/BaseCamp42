@@ -6,7 +6,7 @@
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 17:43:53 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/04 18:34:41 by dtakara          ###   ########.fr       */
+/*   Updated: 2020/12/04 20:17:29 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	ft_putstr(char *str)
 
 int		main(int argc, char **argv)
 {
-	while (argc > 1)
+	while (argc > 1) //o contrário
 	{
-		ft_putstr(argv[argc - 1]);
+		ft_putstr(argv[argc - 1]); //pegar o ultimo argumento q sera o número do index
 		write(1, "\n", 1);
 		argc--;
 	}

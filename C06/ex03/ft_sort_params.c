@@ -6,7 +6,7 @@
 /*   By: dtakara <dtakara@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 18:07:45 by dtakara           #+#    #+#             */
-/*   Updated: 2020/12/04 18:34:06 by dtakara          ###   ########.fr       */
+/*   Updated: 2020/12/04 20:18:29 by dtakara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_strcmp(char *s1, char *s2)
 	{
 		if (s1[i] != s2[i])
 		{
-			return (s1[i] - s2[i]);
+			return (s1[i] - s2[i]); //de outro exercicio
 		}
 		i++;
 	}
@@ -52,10 +52,10 @@ int		main(int argc, char **argv)
 		j = i;
 		while (++j < argc)
 		{
-			if (ft_strcmp(argv[i], argv[j]) > 0)
+			if (ft_strcmp(argv[i], argv[j]) > 0) //comparar quenhé o maior
 			{
 				tmp = argv[i];
-				argv[i] = argv[j];
+				argv[i] = argv[j]; //trocar a posiçao
 				argv[j] = tmp;
 			}
 		}
